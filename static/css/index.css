@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Ga+Maamli&display=swap');
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px 0 50px;
+  padding: 10px 0 10px 0;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #000000;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+header .nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+header .nav-links li {
+  margin: 0 15px;
+}
+
+header .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.01rem;
+  font-weight: 500;
+  transition: all 0.4s ease-out;
+}
+
+header .nav-links li a:hover{
+    color: #0056b3;
+    font-size: 1.02rem;
+}
+
+.hero-section {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(../images/drone-background.jpg) no-repeat center center/cover;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+  z-index: 1;
+}
+
+.hero-section h1, .hero-section p, .cta-buttons {
+    position: relative;
+    z-index: 2;
+  }
+
+.hero-section h1 {
+  font-size: 78px;
+  margin-bottom: 15px;
+  font-family: "Ga Maamli", sans-serif;
+  font-weight: 400;
+  color: aliceblue;
+}
+
+.hero-section p {
+  font-size: 34px;
+  margin-bottom: 40px;
+  color: aliceblue;
+  font-weight: 400;
+  font-family: "Bona Nova SC", serif;
+}
+
+.cta-buttons .cta-button {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  margin: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.cta-buttons .cta-button:hover {
+  background: #0056b3;
+}

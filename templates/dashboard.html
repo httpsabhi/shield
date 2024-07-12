@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/style.css') }}"
+/>
+{% endblock %} {% block content %}
+    <div class="container">
+      <h1>Drone Swarm Disaster Reporting</h1>
+      <button id="check-drones">Check Drone Status</button>
+      <button id="detect-disaster">Detect Disaster</button>
+      <div id="drone-status"></div>
+      <div id="detection-result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
+{% endblock %}
