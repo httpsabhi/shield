@@ -6,8 +6,11 @@
 {% endblock %} {% block content %}
     <div class="container">
       <h1>Drone Swarm Disaster Reporting</h1>
-      <button id="check-drones">Check Drone Status</button>
+      <div class="status-btn">
+        <button id="check-drones">Check Drone Status</button>
       <button id="detect-disaster">Detect Disaster</button>
+      </div>
+      
       <div id="drone-status"></div>
       <div id="detection-result"></div>
     </div>

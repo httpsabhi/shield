@@ -3,7 +3,6 @@ from artifacts.data import generate_random_drones
 import random
 
 app = Flask(__name__)
-
 drones = generate_random_drones()
 
 # Function to simulate disaster detection

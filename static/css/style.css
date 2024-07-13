@@ -1,19 +1,23 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
 .container {
   width: 80%;
-  margin: 0 auto;
+  margin: 5vh auto;
   text-align: center;
+}
+
+.status-btn{
+  margin-top: 5vh;
 }
 
 button {
   padding: 10px 20px;
   margin: 10px;
   cursor: pointer;
+  background: #317dce;
+  color: aliceblue;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 #drone-status,
@@ -21,5 +25,13 @@ button {
   margin-top: 20px;
   padding: 10px;
   border: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #2b2424;
+}
+
+#check-drones:hover{
+  background: green;
+}
+
+#detect-disaster:hover{
+  background: red;
 }

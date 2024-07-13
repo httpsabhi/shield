@@ -1,10 +1,7 @@
 {% extends "layout.html" %}
 
 {% block extra_css %}
-<link
-  rel="stylesheet"
-  href="{{ url_for('static', filename='css/index.css') }}"
-/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
 {% endblock %}
 
 {% block content %}
@@ -12,19 +9,60 @@
   <nav>
     <div class="logo">SHIELD</div>
     <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 </header>
-<div class="hero-section">
+<div class="hero-section" id="home">
   <h1>SHIELD</h1>
   <p>Swarm-based High-Impact Emergency Logistics and Detection</p>
   <div class="cta-buttons">
     <button class="cta-button" id="get-started-button"">Get Started</button>
-    <button class="cta-button">Learn More</button>
+    <button class=" cta-button">Learn More</button>
+  </div>
+</div>
+<div class="project-description-section" id="about">
+  <div class="content">
+    <h2>What is SHIELD?</h2>
+    <p>
+      The Dynamic Remote Disaster Reporting project leverages the power of independent drone swarms to detect and report
+      disasters in remote regions quickly and efficiently. By utilizing advanced technologies such as dynamic mother
+      selection, load balancing, and distributed computing, our solution provides a resilient and scalable approach to
+      disaster management, independent of central servers.</p>
+    <p>Our system ensures continuous monitoring and rapid response capabilities in environments where traditional
+      communication infrastructure is either compromised or non-existent. The drones, equipped with various sensors, can
+      detect environmental anomalies such as temperature spikes indicative of fires, structural vibrations from
+      potential earthquakes, or unusual water levels suggesting floods.</p>
+    <p>The process begins with individual drones patrolling predefined areas, gathering data in real-time. Upon
+      detecting a potential disaster, the drone that identified the anomaly broadcasts this information to the swarm.
+      The swarm then performs a quick consensus check to confirm the validity of the detected anomaly through
+      collaborative data analysis.
+
+      Once a disaster is confirmed, the next crucial step is the dynamic selection of a 'mother' drone. This drone is
+      chosen based on several criteria, including battery life, computational power, proximity to the disaster, and
+      current workload. The mother drone's primary responsibility is to collate all relevant data and relay it to an
+      overlord—typically a human operator or a central command center—ensuring that the information is delivered
+      promptly and reliably.</p>
+    <p>
+      This decentralized approach, facilitated by the drone swarm's ability to operate independently of a central
+      server, enhances the system's robustness. If one drone fails, another can take over its duties, ensuring no single
+      point of failure. Additionally, the distributed nature of the computation allows for efficient processing of large
+      datasets, enabling quick decision-making and action.
+
+      In addition to disaster detection, the drone swarm can assist in ongoing disaster response efforts. For example,
+      the drones can provide real-time aerial footage, map out affected areas, and even deliver essential supplies to
+      isolated or hard-to-reach locations.
+
+      The scalability of the system allows for easy expansion to cover larger areas or integrate more drones as needed.
+      This adaptability ensures that the system can be tailored to various types of disasters and geographical regions,
+      making it a versatile tool for emergency management agencies worldwide.
+    </p>
+  </div>
+  <div class="image">
+    <img src="{{ url_for('static', filename='images/drone-forest-fire.webp') }}" alt="Drone monitoring forest fire">
   </div>
 </div>
 {% endblock %}
