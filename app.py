@@ -43,5 +43,5 @@ def report_to_overlord():
     data = request.json
     return jsonify({'message': 'Report received by overlord', 'data': data})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run()
