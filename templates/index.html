@@ -8,7 +8,12 @@
 <header>
   <nav>
     <div class="logo">SHIELD</div>
-    <ul class="nav-links">
+    <div class="hamburger" id="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#">Services</a></li>
@@ -21,10 +26,10 @@
   <p>Swarm-based High-Impact Emergency Logistics and Detection</p>
   <div class="cta-buttons">
     <button class="cta-button" id="get-started-button"">Get Started</button>
-    <button class=" cta-button">Learn More</button>
+    <button class=" cta-button" id="go-learn-more">Learn More</button>
   </div>
 </div>
-<div class="project-description-section" id="about">
+<section class="project-description-section" id="about">
   <div class="content">
     <h2>What is SHIELD?</h2>
     <p>
@@ -64,5 +69,35 @@
   <div class="image">
     <img src="{{ url_for('static', filename='images/drone-forest-fire.webp') }}" alt="Drone monitoring forest fire">
   </div>
-</div>
+</section>
+
+<section class="problem-statement" id="learn_more">
+  <h2>What is the Problem?</h2>
+  <div class="problem-cards">
+    <div class="problem-card">
+      <img src="{{ url_for('static', filename='images/disaster1.jpeg') }}" alt="Disaster Image 1">
+      <p>Disasters in remote regions often go undetected for extended periods.</p>
+    </div>
+    <div class="problem-card">
+      <img src="{{ url_for('static', filename='images/disaster2.webp') }}" alt="Disaster Image 2">
+      <p>Lack of real-time reporting hinders timely response and increases damage.</p>
+    </div>
+    <div class="problem-card">
+      <img src="{{ url_for('static', filename='images/disaster3.jpeg') }}" alt="Disaster Image 3">
+      <p>Current detection systems are centralized and prone to single points of failure.</p>
+    </div>
+  </div>
+</section>
+
+<section class="implementation">
+  <h2>How to Implement?</h2>
+  <p>Our implementation leverages a mesh network of interconnected drones that operate autonomously to detect disasters in real-time. Here's how it works:</p>
+  <ol>
+    <li><strong>Drone Deployment:</strong> Drones are strategically deployed to monitor specific remote regions.</li>
+    <li><strong>Disaster Detection:</strong> Each drone is equipped with sensors and algorithms to detect signs of disasters, such as fires or floods.</li>
+    <li><strong>Swarm Communication:</strong> Upon detecting a potential disaster, drones communicate with each other to confirm the detection and assess the severity.</li>
+    <li><strong>Mother Drone Selection:</strong> A mother drone is dynamically selected based on factors like battery level, computing power, and proximity to the disaster.</li>
+    <li><strong>Reporting to Overlord:</strong> The mother drone compiles the data and reports the findings to the human operator (overlord) for further action.</li>
+  </ol>
+</section>
 {% endblock %}

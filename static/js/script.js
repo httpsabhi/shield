@@ -2,6 +2,10 @@ $(document).ready(function () {
   $("#get-started-button").click(function () {
     window.location.href = "/dashboard";
   });
+
+  $("#go-learn-more").click(function () {
+    window.location.href = "#learn_more";
+  });
   
   $("#check-drones").click(function () {
     $.ajax({
@@ -31,5 +35,9 @@ $(document).ready(function () {
         }
       },
     });
+  });
+
+  $("#hamburger").click(function () {
+    $("#nav-links").toggleClass("nav-active");
   });
 });

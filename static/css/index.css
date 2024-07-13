@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Ga+Maamli&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Ga+Maamli&display=swap");
 
 nav {
   display: flex;
@@ -43,9 +43,9 @@ header .nav-links li a {
   transition: all 0.4s ease-out;
 }
 
-header .nav-links li a:hover{
-    color: #0056b3;
-    font-size: 1.02rem;
+header .nav-links li a:hover {
+  color: #0056b3;
+  font-size: 1.02rem;
 }
 
 .hero-section {
@@ -72,10 +72,12 @@ header .nav-links li a:hover{
   z-index: 1;
 }
 
-.hero-section h1, .hero-section p, .cta-buttons {
-    position: relative;
-    z-index: 2;
-  }
+.hero-section h1,
+.hero-section p,
+.cta-buttons {
+  position: relative;
+  z-index: 2;
+}
 
 .hero-section h1 {
   font-size: 78px;
@@ -123,7 +125,9 @@ header .nav-links li a:hover{
   margin-right: 30px;
 }
 
-.project-description-section .content h2 {
+.project-description-section .content h2,
+.problem-statement h2,
+.implementation h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #333;
@@ -145,4 +149,112 @@ header .nav-links li a:hover{
 .project-description-section .image img {
   width: 100%;
   border-radius: 10px;
+}
+
+.problem-statement,
+.implementation {
+  padding: 60px 40px;
+  background: #a1a5a0;
+  color: #fff;
+}
+
+.problem-cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.problem-card {
+  width: 30%;
+}
+
+.problem-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.problem-card p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.implementation ol {
+  text-align: justify;
+  margin: 10px 20px;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+}
+
+.implementation p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: antiquewhite;
+  margin: 4px 0;
+}
+
+/* Mobile Device */
+@media only screen and (max-width: 400px) {
+  nav {
+    margin: 0;
+  }
+
+  .hero-section p {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .cta-buttons{
+    display: flex;
+  }
+
+  .cta-buttons .cta-button {
+    font-size: 1.05rem;
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: max-content;
+    top: 10vh;
+    background-color: rgb(13, 13, 32);
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .nav-links.nav-active {
+    transform: translateX(0);
+    padding-bottom: 10px;
+  }
+
+  .nav-links.nav-active li {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
 }
